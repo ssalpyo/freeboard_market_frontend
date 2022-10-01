@@ -2,25 +2,16 @@ import styled from "@emotion/styled";
 import { HeartOutlined } from "@ant-design/icons";
 
 export const Wrapper = styled.div`
-  width: 1600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   border: none;
   box-shadow: 0px 0px 10px gray;
   padding: 50px;
-  display: flex;
-  flex-direction: row;
 `;
 
-export const WrapperLeftBox = styled.div`
-  width: 70%;
-  padding-left: 30px;
-  padding-right: 80px;
-  display: flex;
-  flex-direction: column;
-  border-right: 1px solid #999;
-`;
-
-export const WrapperRightBox = styled.div`
+export const visitedItems = styled.div`
   width: 30%;
   display: flex;
   flex-direction: column;

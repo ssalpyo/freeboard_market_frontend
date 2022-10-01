@@ -3,48 +3,71 @@ import styled from "@emotion/styled";
 export const Wrapper = styled.form`
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
-  padding-bottom: 100px;
+  width: 1200px;
+  height: 903px;
+  background: #fff;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  padding: 70px 97px;
 `;
 
-export const Logo = styled.h1`
-  font-family: "Noto Sans CJK KR";
+export const LogoBox = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 32.66px;
+  border-bottom: 1px solid #c9c9c9;
+  margin-bottom: 81px;
+`;
+
+export const Logo = styled.div`
+  font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 700;
-  font-size: 28px;
-  line-height: 40px;
-  color: #fff;
-  margin-bottom: 40px;
-  text-align: center;
+  font-size: 50px;
+  line-height: 100%;
+  color: #000;
+`;
+
+export const LogoEng = styled.div`
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  padding-left: 40px;
+  color: #000000;
+`;
+
+export const InputBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 30px;
 `;
 
 export const Label = styled.div`
-  font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #fff;
-  padding-top: 15px;
+  font-size: 24px;
+  line-height: 100%;
+  color: #000000;
 `;
 
-export const InputBox = styled.input`
-  border: 1px solid #ffffff;
-  border-radius: 16px;
-  padding: 0px 16px;
-  width: 384px;
+export const SignInput = styled.input`
+  width: 786.96px;
   height: 64px;
-  margin-top: 10px;
-  margin-bottom: 4px;
-  background: none;
-  outline-color: #000;
-  font-family: "Noto Sans CJK KR";
+  background: #f6f6f6;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 0px 37px;
+  font-family: "Noto Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: #fff;
-  opacity: 0.6;
+  font-size: 15px;
+  line-height: 100%;
+  color: #a9a9a9;
 `;
 
 export const Error = styled.div`
@@ -57,24 +80,72 @@ export const Error = styled.div`
   padding-left: 16px;
 `;
 
+export const ButtonBox = styled.div`
+  display: flex;
+  padding-top: 57px;
+  justify-content: center;
+`;
+
 export const SignUpButton = styled.button`
-  width: 386px;
-  height: 64px;
-  margin: 40px 0px;
-  background: #ffd600;
+  width: 330px;
+  height: 70px;
+  background: #ffe004;
   border: none;
-  border-radius: 16px;
-  font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans KR";
   font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  color: #000;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+  color: #000000;
+  margin-right: 21px;
   cursor: pointer;
 
   :disabled {
-    background: #4f4f4f;
-    color: #bdbdbd;
+    background: #f6f6f6;
     cursor: default;
   }
+`;
+
+export const CancelButton = styled.button`
+  width: 330px;
+  height: 70px;
+  background: #000000;
+  border: none;
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+  color: #ffffff;
+  cursor: pointer;
+`;
+
+export const Footer = styled.div`
+  padding-top: 39px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
+
+export const Desk = styled.div`
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #888888;
+`;
+
+export const Login = styled.div`
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: #000000;
+  border-bottom: 1px solid black;
+  margin-left: 21px;
+  cursor: pointer;
 `;

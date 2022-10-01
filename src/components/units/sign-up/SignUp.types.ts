@@ -10,4 +10,5 @@ export interface ISignUpUIProps {
   handleSubmit: any;
   formState: any;
   onClickSignUp: (data: IData) => void;
+	onClickCancel: () => void;
 }

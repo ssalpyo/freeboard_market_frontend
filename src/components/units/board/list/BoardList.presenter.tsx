@@ -7,7 +7,6 @@ import { v4 as uuidv4 } from "uuid";
 export default function BoardListUI(props: IBoardListUIProps) {
   return (
     <S.Wrapper>
-      <S.WrapperLeftBox>
         <S.SearchWrapper>
           <S.Search
             placeholder="제목을 검색해주세요."
@@ -54,7 +53,6 @@ export default function BoardListUI(props: IBoardListUIProps) {
             게시물 등록하기
           </S.Button>
         </S.Footer>
-      </S.WrapperLeftBox>
     </S.Wrapper>
   );
 }

@@ -6,7 +6,6 @@ import InfiniteScroll from "react-infinite-scroller";
 export default function UseditemListUI(props: IUseditemListUIProps) {
   return (
     <S.Wrapper>
-      <S.WrapperLeftBox>
         <S.SearchWrapper>
           <S.Search placeholder="제품을 검색해주세요." />
         </S.SearchWrapper>
@@ -54,8 +53,7 @@ export default function UseditemListUI(props: IUseditemListUIProps) {
             상품 등록하기
           </S.Button>
         </S.Footer>
-      </S.WrapperLeftBox>
-      <S.WrapperRightBox>
+      <S.visitedItems>
         <h1>오늘 본 상품</h1>
         {props.visitedItems.length ? (
           <div>
@@ -93,7 +91,7 @@ export default function UseditemListUI(props: IUseditemListUIProps) {
         ) : (
           <></>
         )}
-      </S.WrapperRightBox>
+      </S.visitedItems>
     </S.Wrapper>
   );
 }
