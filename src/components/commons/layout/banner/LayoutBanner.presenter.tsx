@@ -1,7 +1,24 @@
-import { SliderItem, Wrapper } from "./LayoutBanner.styles";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { SliderItem, Wrapper, StyledSlider, ArrowImage } from "./LayoutBanner.styles";
+import styled from '@emotion/styled';
+
+const Next = styled.div`
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 30px;
+  z-index: 2;
+  text-align: right;
+  line-height: 30px;
+`;
+const Prev = styled.div`
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 30px;
+  z-index: 2;
+  text-align: left;
+  line-height: 30px;
+`;
 
 export default function LayoutBannerUI() {
   const settings = {
@@ -10,14 +27,23 @@ export default function LayoutBannerUI() {
     speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
     autoplay: true,
     autoplaySpeed: 3000,
+		nextArrow: (
+      <Next>
+        <ArrowImage src="/images/next.png" alt="Next" />
+      </Next>
+    ),
+    prevArrow: (
+			<Prev>
+				<ArrowImage src="/images/prev.png" alt="Prev" />
+      </Prev>
+    ),
   };
 
   return (
     <Wrapper>
-      <Slider {...settings}>
+      <StyledSlider {...settings}>
         <SliderItem src="/images/banner1.png" />
 
         <SliderItem src="/images/banner2.png" />
@@ -25,7 +51,7 @@ export default function LayoutBannerUI() {
         <SliderItem src="/images/banner3.png" />
 
         <SliderItem src="/images/banner4.png" />
-      </Slider>
+      </StyledSlider>
     </Wrapper>
   );
 }
