@@ -10,22 +10,20 @@ import LayoutSideBar from "./side-bar/LayoutSideBar.container";
 interface ILayoutProps {
   children: ReactNode;
 }
-interface IProps {
-  isLogin: boolean;
-}
+
+const Wrapper = styled.div`
+	width: 100%;
+	max-width: 1600px;
+  padding: 0 20px;
+	margin: auto;
+`
 
 const Body = styled.div`
-  /* height: 100%; */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  /* align-items: center; */
-  padding: 50px;
-  background: ${(props: IProps) =>
-    props.isLogin
-      ? `linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url("/images/background.png")`
-      : "#e5e5e5"};
-  background-repeat: no-repeat;
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+  background-color: #e5e5e5;
 `;
 
 export default function Layout(props: ILayoutProps) {
@@ -36,15 +34,15 @@ export default function Layout(props: ILayoutProps) {
   const isMyPage: boolean = router.asPath.includes("mypages");
 
   return (
-    <>
+    <Wrapper>
       <LayoutHeader />
       {isLogin || <LayoutBanner />}
       {isLogin || <LayoutNavigation />}
-      <Body isLogin={isLogin}>
+      <Body>
         {isMyPage && <LayoutSideBar />}
         {props.children}
       </Body>
       <LayoutFooter />
-    </>
+    </Wrapper>
   );
 }
