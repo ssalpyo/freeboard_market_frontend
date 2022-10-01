@@ -1,29 +1,25 @@
 import styled from "@emotion/styled";
 
 export const Wrapper = styled.div`
-  height: 65px;
-  /* background-color: #f5f2fc; */
+	width: 100%;
   background-color: #1d1d1f;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   position: sticky;
   top: 0;
   z-index: 2;
 `;
 
 export const InnerWrapper = styled.div`
-  width: 1200px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
+	padding: 0 20px;
 `;
 
 export const InnerLogo = styled.div`
-  font-size: 30px;
+  font-size: 32px;
   font-weight: bold;
   font-family: "live";
   font-style: italic;
