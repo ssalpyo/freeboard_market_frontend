@@ -12,17 +12,17 @@ export default function LayoutHeaderUI(props: IProps) {
               {props.data?.fetchUserLoggedIn.name}
             </S.SignInButton>
             <S.LogOutButton onClick={props.onClickLogOut}>
-              Logout
+              로그아웃
             </S.LogOutButton>
           </div>
         )}
         {!props.accessToken && (
           <div>
             <S.SignInButton onClick={props.onClickMoveToLogin}>
-              Sign in
+              로그인
             </S.SignInButton>
             <S.SignUpButton onClick={props.onClickMoveToSignUp}>
-              Sign up
+              회원가입
             </S.SignUpButton>
           </div>
         )}
