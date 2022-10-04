@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 import * as S from "./SignUp.styles";
 import { ISignUpUIProps } from "./SignUp.types";
 
@@ -7,7 +7,6 @@ export default function SignUpUI(props: ISignUpUIProps) {
     <S.Wrapper onSubmit={props.handleSubmit(props.onClickSignUp)}>
       <S.LogoBox>
         <S.Logo>회원가입</S.Logo>
-        <S.LogoEng>Sign up</S.LogoEng>
       </S.LogoBox>
       <S.InputBox>
         <S.Label>아이디</S.Label>
@@ -55,9 +54,9 @@ export default function SignUpUI(props: ISignUpUIProps) {
       </S.ButtonBox>
       <S.Footer>
         <S.Desk>이미 아이디가 있으신가요?</S.Desk>
-				<Link href="/login">
-        <S.Login>로그인</S.Login>
-				</Link>
+        <Link href="/login">
+          <S.Login>로그인</S.Login>
+        </Link>
       </S.Footer>
     </S.Wrapper>
   );
