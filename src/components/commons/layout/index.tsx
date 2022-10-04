@@ -13,14 +13,14 @@ interface ILayoutProps {
 
 const Wrapper = styled.div`
 	width: 100%;
-	max-width: 1600px;
-  padding: 0 20px;
+	/* max-width: 1400px; */
+  /* padding: 0 20px; */
 	margin: auto;
 `
 
 const Body = styled.div`
 	width: 100%;
-	padding: 20px;
+	padding: 20px 12%;
 	display: flex;
 	justify-content: center;
   background-color: #e5e5e5;
