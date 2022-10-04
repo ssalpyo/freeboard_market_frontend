@@ -7,7 +7,6 @@ export default function LoginUI(props: ILoginUIProps) {
     <S.Wrapper onSubmit={props.handleSubmit(props.onClickLogin)}>
       <S.LogoBox>
         <S.Logo>로그인</S.Logo>
-        <S.LogoEng>Login</S.LogoEng>
       </S.LogoBox>
       <S.SignInput
         type="text"
@@ -21,10 +20,6 @@ export default function LoginUI(props: ILoginUIProps) {
         {...props.register("password")}
       />
       <S.Error>{props.formState.errors.password?.message}</S.Error>
-      <S.CheckBoxWrapper>
-        <S.CheckBoxIcon />
-        <S.LoginStatus>로그인 상태 유지</S.LoginStatus>
-      </S.CheckBoxWrapper>
       <S.SignButton disabled={!props.formState.isValid}>로그인</S.SignButton>
       <S.Footer>
         <S.Label>아직 계정이 없으신가요?</S.Label>
