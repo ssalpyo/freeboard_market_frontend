@@ -11,19 +11,19 @@ interface ILayoutProps {
   children: ReactNode;
 }
 
-const Wrapper = styled.div`
-	width: 100%;
-	/* max-width: 1400px; */
+const Wrapper = styled.body`
+  /* max-width: 1400px; */
   /* padding: 0 20px; */
-	margin: auto;
-`
+  margin: auto;
+  background-color: #e5e5e5;
+`;
 
 const Body = styled.div`
-	width: 100%;
-	padding: 20px 12%;
-	display: flex;
-	justify-content: center;
-  background-color: #e5e5e5;
+  width: 100%;
+  height: 100%;
+  padding: 20px 12%;
+  display: flex;
+  justify-content: center;
 `;
 
 export default function Layout(props: ILayoutProps) {
