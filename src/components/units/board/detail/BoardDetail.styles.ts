@@ -5,25 +5,37 @@ import {
   LinkOutlined,
   EnvironmentOutlined,
 } from "@ant-design/icons";
+import theme from "../../../../commons/styles/theme";
 
 export const Wrapper = styled.div`
-  width: 1600px;
+  width: 100%;
+  max-width: 1600px;
   background-color: #fff;
   border: none;
   box-shadow: 0px 0px 10px gray;
   padding: 50px;
   display: flex;
   flex-direction: row;
+
+  @media ${theme.device.tablet} {
+    flex-direction: column;
+    padding: 30px;
+  }
 `;
 
 export const CardWrapper = styled.div`
   width: 70%;
-  padding-left: 30px;
-  padding-right: 80px;
+  padding-right: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-right: 1px solid #999;
+
+  @media ${theme.device.tablet} {
+    width: 100%;
+    border: none;
+    padding-right: 0px;
+  }
 `;
 
 export const CardHeader = styled.div`
@@ -191,7 +203,7 @@ export const ButtonWrapper = styled.div`
 export const Button = styled.button`
   width: 100px;
   height: 45px;
-  background-color: white;
+  background-color: #fff;
   border: 1px solid #999;
   margin: 0px 12px;
   font-family: "Noto Sans CJK KR";
@@ -204,7 +216,8 @@ export const Button = styled.button`
   cursor: pointer;
 
   :hover {
-    background-color: #ffd600;
-    border-color: #fff;
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
   }
 `;
