@@ -101,37 +101,6 @@ export default function BoardWrite(props: IBoardWriteProps) {
   };
 
   const onClickEdit = async (data: IData) => {
-    // if (
-    //   !title &&
-    //   !contents &&
-    //   !youtubeUrl &&
-    //   !zipcode &&
-    //   !address &&
-    //   !addressDetail &&
-    //   !isChangedTitle &&
-    //   !isChangedContents &&
-    //   !fileUrls
-    // ) {
-    //   Modal.warning({
-    //     content: "수정한 내용이 없습니다.",
-    //   });
-    //   return;
-    // }
-    // if (!password) {
-    //   Modal.warning({
-    //     content: "비밀번호를 입력해주세요.",
-    //   });
-    //   return;
-    // }
-    // if (!title && isChangedTitle) {
-    //   setTitleError("제목을 입력해주세요.");
-    //   return;
-    // }
-    // if (!contents && isChangedContents) {
-    //   setContentsError("내용을 입력해주세요.");
-    //   return;
-    // }
-
     try {
       const updateBoardInput: IupdateBoardInput = {};
 

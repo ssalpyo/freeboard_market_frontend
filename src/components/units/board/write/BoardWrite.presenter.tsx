@@ -4,6 +4,7 @@ import { Modal } from "antd";
 import DaumPostcode from "react-daum-postcode";
 import Uploads01 from "../../../commons/uploads/01/Uploads01.container";
 import { v4 as uuidv4 } from "uuid";
+import WriteInput from "../../../commons/inputs/write";
 
 export default function BoardWriteUI(props: IBoardWriteUIProps) {
   return (
@@ -17,32 +18,32 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
         <S.WriterWrapper>
           <S.InputWrapper>
             <S.Label>작성자</S.Label>
-            <S.Writer
+            <WriteInput
               type="text"
-              placeholder="이름을 적어주세요."
+              placeholder="이름을 작성해주세요."
               disabled={props.isEdit}
               defaultValue={props.boardData?.fetchBoard.writer}
-              {...props.register("writer")}
+              register={props.register("writer")}
             />
             <S.Error>{props.formState.errors.writer?.message}</S.Error>
           </S.InputWrapper>
           <S.InputWrapper>
             <S.Label>비밀번호</S.Label>
-            <S.Password
+            <WriteInput
               type="password"
               placeholder="비밀번호를 작성해주세요."
-              {...props.register("password")}
+              register={props.register("password")}
             />
             <S.Error>{props.formState.errors.password?.message}</S.Error>
           </S.InputWrapper>
         </S.WriterWrapper>
         <S.InputWrapper>
           <S.Label>제목</S.Label>
-          <S.Subject
+          <WriteInput
             type="text"
             placeholder="제목을 작성해주세요."
             defaultValue={props.boardData?.fetchBoard.title}
-            {...props.register("title")}
+            register={props.register("title")}
           />
           <S.Error>{props.formState.errors.title?.message}</S.Error>
         </S.InputWrapper>
@@ -96,10 +97,11 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
         </S.InputWrapper>
         <S.InputWrapper>
           <S.Label>유튜브</S.Label>
-          <S.Youtube
+          <WriteInput
+            type="text"
             placeholder="링크를 복사해주세요."
             defaultValue={props.boardData?.fetchBoard.youtubeUrl}
-            {...props.register("youtubeUrl")}
+            register={props.register("youtubeUrl")}
           />
         </S.InputWrapper>
         <S.ImageWrapper>
