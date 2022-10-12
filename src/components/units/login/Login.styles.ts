@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { breakPoints } from "../../../commons/styles/media";
+import theme from "../../../commons/styles/theme";
 
 export const Wrapper = styled.form`
   display: flex;
@@ -10,7 +10,7 @@ export const Wrapper = styled.form`
   border-radius: 5px;
   padding: 60px 40px;
 
-  @media ${breakPoints.mobile} {
+  @media ${theme.device.mobile} {
     padding: 40px 20px;
   }
 `;
