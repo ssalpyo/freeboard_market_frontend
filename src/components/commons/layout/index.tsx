@@ -6,6 +6,7 @@ import { ReactNode } from "react";
 import LayoutFooter from "./footer/LayoutFooter.container";
 import { useRouter } from "next/router";
 import LayoutSideBar from "./side-bar/LayoutSideBar.container";
+import theme from "../../../commons/styles/theme";
 
 interface ILayoutProps {
   children: ReactNode;
@@ -21,9 +22,14 @@ const Wrapper = styled.body`
 const Body = styled.div`
   width: 100%;
   height: 100%;
-  padding: 20px 12%;
+  min-height: 800px;
+  padding: 20px 10%;
   display: flex;
   justify-content: center;
+
+  @media ${theme.device.tablet} {
+    padding: 20px;
+  }
 `;
 
 export default function Layout(props: ILayoutProps) {
