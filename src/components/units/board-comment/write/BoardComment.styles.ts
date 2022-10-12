@@ -1,11 +1,17 @@
 import { CommentOutlined } from "@ant-design/icons";
 import styled from "@emotion/styled";
+import theme from "../../../../commons/styles/theme";
 
 export const Wrapper = styled.div`
   width: 30%;
   display: flex;
   flex-direction: column;
   padding-left: 50px;
+
+  @media ${theme.device.tablet} {
+    width: 100%;
+    padding-left: 0px;
+  }
 `;
 
 export const CommentHeader = styled.div`
@@ -47,7 +53,8 @@ export const InputInfoWrapper = styled.div`
 `;
 
 export const InputInfo = styled.input`
-  width: 110px;
+  width: 100%;
+  max-width: 110px;
   height: 40px;
   background: #fff;
   border: 1px solid #bdbdbd;
