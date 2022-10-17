@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import theme from "../../../../commons/styles/theme";
+import { IMenuItemProps } from "./LayoutNavigation.types";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -14,7 +15,7 @@ export const Wrapper = styled.div`
 export const MenuItem = styled.div`
   margin: 0 60px;
   font-size: 18px;
-  color: #fff;
+  color: ${(props: IMenuItemProps) => (props.isActive ? "#000" : "#fff")};
   cursor: pointer;
 
   :hover {
