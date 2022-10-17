@@ -8,18 +8,14 @@ export const Container = styled.footer`
   padding: 60px 0;
 
   @media ${theme.device.tablet} {
-    padding-bottom: 80px;
+    padding: 40px 0;
   }
 `;
 
 export const Wrapper = styled.div`
   width: 100%;
-  max-width: 1024px;
-  padding: 0 20px;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
-  gap: 100px;
 `;
 
 export const Title = styled.h2`
