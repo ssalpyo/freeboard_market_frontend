@@ -153,16 +153,16 @@ export const Price = styled.div`
 
 export const Footer = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row-reverse;
   padding-top: 30px;
 `;
 
 export const Button = styled.button`
-  width: 171px;
+  width: 100%;
+  max-width: 171px;
   height: 52px;
   background-color: white;
+  border: 1px solid #000;
   border-radius: 15px;
   display: flex;
   flex-direction: row;
