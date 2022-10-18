@@ -69,7 +69,7 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
                 props.boardData?.fetchBoard.boardAddress?.zipcode
               }
             />
-            <S.SearchButton onClick={props.onToggleAddressModal}>
+            <S.SearchButton type="button" onClick={props.onToggleAddressModal}>
               우편번호 검색
             </S.SearchButton>
             {props.addressModalVisible && (
@@ -90,6 +90,7 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
           />
           <S.Address
             onChange={props.onChangeAddressDetail}
+            placeholder="상세 주소를 입력해주세요"
             defaultValue={
               props.boardData?.fetchBoard.boardAddress?.addressDetail
             }
