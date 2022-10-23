@@ -3,6 +3,7 @@ import * as S from "./UseditemWrite.styles";
 import { IUseditemWriteUIProps } from "./UseditemWrite.types";
 import { v4 as uuidv4 } from "uuid";
 import KakaoMapWrite from "../../../commons/kakao-map/write";
+import WriteInput from "../../../commons/inputs/write";
 
 export default function UseditemWriteUI(props: IUseditemWriteUIProps) {
   return (
@@ -16,30 +17,30 @@ export default function UseditemWriteUI(props: IUseditemWriteUIProps) {
         <S.ProductWrapper>
           <S.InputWrapper>
             <S.Label>상품명</S.Label>
-            <S.Name
+            <WriteInput
               type="text"
               placeholder="상품명을 작성해주세요."
               defaultValue={props.useditemData?.fetchUseditem.name}
-              {...props.register("name")}
+              register={props.register("name")}
             />
           </S.InputWrapper>
           <S.InputWrapper>
             <S.Label>판매 가격</S.Label>
-            <S.Price
+            <WriteInput
               type="text"
               placeholder="판매 가격을 입력해주세요."
               defaultValue={props.useditemData?.fetchUseditem.price}
-              {...props.register("price")}
+              register={props.register("price")}
             />
           </S.InputWrapper>
         </S.ProductWrapper>
         <S.InputWrapper>
           <S.Label>한줄 요약</S.Label>
-          <S.Remarks
+          <WriteInput
             type="text"
             placeholder="한줄 요약을 작성해주세요."
             defaultValue={props.useditemData?.fetchUseditem.remarks}
-            {...props.register("remarks")}
+            register={props.register("remarks")}
           />
         </S.InputWrapper>
         <S.InputWrapper>
@@ -88,13 +89,6 @@ export default function UseditemWriteUI(props: IUseditemWriteUIProps) {
             />
           ))}
         </S.ImageWrapper>
-        <S.OptionWrapper>
-          <S.Label>메인 사진 설정</S.Label>
-          <S.RadioButton type="radio" id="image1" name="radio-button" />
-          <S.RadioLabel htmlFor="image1">사진1</S.RadioLabel>
-          <S.RadioButton type="radio" id="image2" name="radio-button" />
-          <S.RadioLabel htmlFor="image2">사진2</S.RadioLabel>
-        </S.OptionWrapper>
         <S.ButtonWrapper>
           <S.SubmitButton disabled={!props.formState.isValid}>
             {props.isEdit ? "수정하기" : "등록하기"}
