@@ -79,7 +79,7 @@ export const InputWrapper = styled.div`
 
 export const Contents = styled(ReactQuill)`
   width: 100%;
-  height: 350px;
+  height: 260px;
 `;
 
 export const ZipcodeWrapper = styled.div`
@@ -124,22 +124,6 @@ export const Youtube = styled.input`
 export const ImageWrapper = styled.div`
   width: 100%;
   padding-top: 20px;
-`;
-
-export const OptionWrapper = styled.div`
-  width: 100%;
-  padding-top: 40px;
-`;
-
-export const RadioButton = styled.input`
-  cursor: pointer;
-`;
-
-export const RadioLabel = styled.label`
-  margin-left: 8px;
-  margin-right: 20px;
-  font-weight: 500;
-  cursor: pointer;
 `;
 
 export const ButtonWrapper = styled.div`
