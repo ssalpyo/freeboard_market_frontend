@@ -10,7 +10,7 @@ export const Wrapper = styled.form`
   border-radius: 5px;
   padding: 60px 40px;
 
-  @media ${theme.device.mobile} {
+  @media ${theme.device.tablet} {
     padding: 40px 20px;
   }
 `;

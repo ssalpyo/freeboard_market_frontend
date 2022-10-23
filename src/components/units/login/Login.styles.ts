@@ -5,12 +5,13 @@ export const Wrapper = styled.form`
   display: flex;
   flex-direction: column;
   width: 500px;
+  height: 500px;
   background: #fff;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.07);
   border-radius: 5px;
   padding: 60px 40px;
 
-  @media ${theme.device.mobile} {
+  @media ${theme.device.tablet} {
     padding: 40px 20px;
   }
 `;
