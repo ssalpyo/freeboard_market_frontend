@@ -1,11 +1,11 @@
 import styled from "@emotion/styled";
 
 export const Wrapper = styled.div`
-	width: 100%;
+  width: 100%;
   background-color: #1d1d1f;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 99;
 `;
 
 export const InnerWrapper = styled.div`
@@ -15,7 +15,7 @@ export const InnerWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
-	padding: 0 20px;
+  padding: 0 20px;
 `;
 
 export const InnerLogo = styled.div`
