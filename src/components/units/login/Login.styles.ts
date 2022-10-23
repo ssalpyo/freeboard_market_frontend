@@ -33,32 +33,13 @@ export const Logo = styled.div`
   color: #000;
 `;
 
-export const SignInput = styled.input`
-  height: 60px;
-  background: #f6f6f6;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-family: "Noto Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
-  align-items: center;
-  text-transform: capitalize;
-  color: #6b6b6b;
-  padding: 0px 30px;
-`;
-
 export const Error = styled.div`
   font-family: "Noto Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  text-transform: capitalize;
-  color: #ef3030;
-  padding-left: 10px;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  color: #cc0000;
+  padding: 5px 5px 20px 5px;
 `;
 
 export const SignButton = styled.button`
