@@ -13,3 +13,8 @@ export const restoreAccessTokenLoadable = selector({
     return newAccessToken;
   },
 });
+
+export const visitedState: any = atom({
+  key: "visited",
+  default: [],
+});
