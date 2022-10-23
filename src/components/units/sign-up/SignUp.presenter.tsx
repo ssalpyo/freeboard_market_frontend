@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SignInput from "../../commons/inputs/sign-in-up";
 import * as S from "./SignUp.styles";
 import { ISignUpUIProps } from "./SignUp.types";
 
@@ -10,43 +11,43 @@ export default function SignUpUI(props: ISignUpUIProps) {
       </S.LogoBox>
       <S.InputBox>
         <S.Label>아이디</S.Label>
-        <S.SignInput
+        <SignInput
           type="text"
-          placeholder="이메일 아이디를 @까지 정확하게 입력하세요"
-          {...props.register("email")}
+          placeholder="이메일 아이디를 @까지 정확하게 입력하세요."
+          register={props.register("email")}
         />
       </S.InputBox>
       <S.Error>{props.formState.errors.email?.message}</S.Error>
       <S.InputBox>
         <S.Label>비밀번호</S.Label>
-        <S.SignInput
+        <SignInput
           type="password"
-          placeholder="영문+숫자 조합 8~16자리를 입력해주세요"
-          {...props.register("password")}
+          placeholder="영문+숫자 조합 8~16자리를 입력해주세요."
+          register={props.register("password")}
         />
       </S.InputBox>
       <S.Error>{props.formState.errors.password?.message}</S.Error>
       <S.InputBox>
         <S.Label>비밀번호 확인</S.Label>
-        <S.SignInput
+        <SignInput
           type="password"
-          placeholder="영문+숫자 조합 8~16자리를 입력해주세요"
-          {...props.register("passwordCheck")}
+          placeholder="영문+숫자 조합 8~16자리를 입력해주세요."
+          register={props.register("passwordCheck")}
         />
       </S.InputBox>
       <S.Error>{props.formState.errors.passwordCheck?.message}</S.Error>
       <S.InputBox>
         <S.Label>이름</S.Label>
-        <S.SignInput
+        <SignInput
           type="text"
           placeholder="Ex) 홍길동"
-          {...props.register("name")}
+          register={props.register("name")}
         />
       </S.InputBox>
       <S.Error>{props.formState.errors.name?.message}</S.Error>
       <S.ButtonBox>
         <S.SignUpButton disabled={!props.formState.isValid}>
-          회원가입하기
+          회원가입
         </S.SignUpButton>
         <S.CancelButton type="button" onClick={props.onClickCancel}>
           취소

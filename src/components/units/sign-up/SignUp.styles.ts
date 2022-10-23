@@ -20,8 +20,8 @@ export const LogoBox = styled.div`
   display: flex;
   align-items: baseline;
   padding-bottom: 20px;
+  margin-bottom: 30px;
   border-bottom: 1px solid #c9c9c9;
-  margin-bottom: 60px;
 `;
 
 export const Logo = styled.div`
@@ -37,7 +37,7 @@ export const InputBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 30px;
+  padding-top: 30px;
 `;
 
 export const Label = styled.div`
@@ -50,35 +50,20 @@ export const Label = styled.div`
   color: #000;
 `;
 
-export const SignInput = styled.input`
-  width: 100%;
-  max-width: 780px;
-  height: 60px;
-  background: #f6f6f6;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0px 30px;
-  font-family: "Noto Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
-  color: #a9a9a9;
-`;
-
 export const Error = styled.div`
+  align-self: flex-end;
+  padding-top: 2px;
   font-family: "Noto Sans CJK KR";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: #ff0000;
-  padding-left: 10px;
+  color: #cc0000;
 `;
 
 export const ButtonBox = styled.div`
   display: flex;
-  padding-top: 50px;
+  padding-top: 80px;
   justify-content: center;
 `;
 
