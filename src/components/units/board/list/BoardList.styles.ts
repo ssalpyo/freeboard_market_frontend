@@ -14,7 +14,8 @@ export const Wrapper = styled.div`
 `;
 
 export const SearchBox = styled.div`
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   position: relative;
 
   @media ${theme.device.tablet} {
