@@ -59,3 +59,11 @@ export const CREATE_POINT_TRANSACTION_OF_BUYING_AND_SELLING = gql`
     }
   }
 `;
+
+export const FETCH_USEDITEMS_I_PICKED = gql`
+  query fetchUseditemsIPicked($search: String, $page: Int) {
+    fetchUseditemsIPicked(search: $search, page: $page) {
+      _id
+    }
+  }
+`;

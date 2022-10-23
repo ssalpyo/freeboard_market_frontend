@@ -1,9 +1,5 @@
 import styled from "@emotion/styled";
-import {
-  LinkOutlined,
-  EnvironmentOutlined,
-  HeartOutlined,
-} from "@ant-design/icons";
+import { LinkOutlined, EnvironmentOutlined } from "@ant-design/icons";
 
 export const Wrapper = styled.div`
   width: 1600px;
@@ -147,9 +143,9 @@ export const PickedWrapper = styled.div`
   padding-right: 10px;
 `;
 
-export const PickedIcon = styled(HeartOutlined)`
-  font-size: 30px;
-  color: #ffd600;
+export const PickImg = styled.img`
+  width: 30px;
+  cursor: pointer;
 `;
 
 export const PickedCount = styled.div`

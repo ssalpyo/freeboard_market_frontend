@@ -1,17 +1,21 @@
 import { useMutation, useQuery } from "@apollo/client";
 import { Modal } from "antd";
 import { NextRouter, useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import UseditemDetailUI from "./UseditemDetail.presenter";
 import {
   CREATE_POINT_TRANSACTION_OF_BUYING_AND_SELLING,
   DELETE_USEDITEM,
   FETCH_USEDITEM,
+  FETCH_USEDITEMS_I_PICKED,
   FETCH_USER_LOGGED_IN,
   TOGGLE_USEDITEM_PICK,
 } from "./UseditemDetail.queries";
 
 export default function UseditemDetail() {
   const router: NextRouter = useRouter();
+
+  const [isActive, setIsActive] = useState<boolean>(false);
   const [deleteUseditem] = useMutation(DELETE_USEDITEM);
   const [toggleUseditemPick] = useMutation(TOGGLE_USEDITEM_PICK);
   const [createPointTransactionOfBuyingAndSelling] = useMutation(
@@ -27,22 +31,26 @@ export default function UseditemDetail() {
   const { data: userData } =
     useQuery<Pick<any, "fetchUserLoggedIn">>(FETCH_USER_LOGGED_IN);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 1500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  };
+  const { data: pickList } = useQuery(FETCH_USEDITEMS_I_PICKED, {
+    variables: {
+      search: "",
+    },
+  });
+
+  useEffect(() => {
+    pickList?.fetchUseditemsIPicked.forEach((el: any) => {
+      if (el._id === data.fetchUseditem._id) {
+        return setIsActive(true);
+      }
+    });
+  }, [pickList?.fetchUseditemsIPicked]);
 
   const onClickUseditemPick = async () => {
     try {
-      await toggleUseditemPick({
+      const result = await toggleUseditemPick({
         variables: { useditemId: router.query.useditemId },
       });
+      setIsActive(result.data?.toggleUseditemPick);
       refetch();
     } catch (error: any) {
       Modal.error({ content: error.message });
@@ -93,10 +101,10 @@ export default function UseditemDetail() {
   return (
     <UseditemDetailUI
       data={data}
-      settings={settings}
+      userData={userData}
+      isActive={isActive}
       onClickUseditemDelete={onClickUseditemDelete}
       onClickUseditemEdit={onClickUseditemEdit}
-      userData={userData}
       onClickUseditemPick={onClickUseditemPick}
       onClickBuyButton={onClickBuyButton}
     />

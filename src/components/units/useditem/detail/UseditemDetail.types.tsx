@@ -1,9 +1,9 @@
 export interface IUseditemDetailUIProps {
   data: any;
-  settings: any;
+  userData: any;
+  isActive: boolean;
   onClickUseditemDelete: () => void;
   onClickUseditemEdit: () => void;
-  userData: any;
   onClickUseditemPick: () => void;
   onClickBuyButton: () => void;
 }

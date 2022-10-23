@@ -9,6 +9,17 @@ import KakaoMapDetail from "../../../commons/kakao-map/detail";
 import UseditemQuestion from "../../useditem-question/write/useditemQuestion.container";
 
 export default function UseditemDetailUI(props: IUseditemDetailUIProps) {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 1500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
+
   return (
     <S.Wrapper>
       <S.CardWrapper>
@@ -42,8 +53,12 @@ export default function UseditemDetailUI(props: IUseditemDetailUIProps) {
             <S.Price>
               {props.data?.fetchUseditem.price.toLocaleString()}원
             </S.Price>
-            <S.PickedWrapper>
-              <S.PickedIcon onClick={props.onClickUseditemPick} />
+            <S.PickedWrapper onClick={props.onClickUseditemPick}>
+              {props.isActive ? (
+                <S.PickImg src="/images/active-pick.png" />
+              ) : (
+                <S.PickImg src="/images/pick.png" />
+              )}
               <S.PickedCount>
                 {props.data?.fetchUseditem.pickedCount}
               </S.PickedCount>
@@ -52,7 +67,7 @@ export default function UseditemDetailUI(props: IUseditemDetailUIProps) {
         </S.CardBodyTop>
         {props.data?.fetchUseditem.images[0] ? (
           <S.Carousel>
-            <Slider {...props.settings}>
+            <Slider {...settings}>
               {props.data?.fetchUseditem.images.map((el: string) => (
                 <S.Image
                   key={uuidv4()}
