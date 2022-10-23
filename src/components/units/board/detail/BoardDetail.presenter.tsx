@@ -20,11 +20,10 @@ export default function BoardDetailUI(props: IBoardDetailUIProps) {
             </S.CreatedAt>
           </S.WriterWrapper>
           <S.LocationWrapper>
-            <S.LinkIcon />
-            <Tooltip
-              placement="topRight"
-              title={`${props.data?.fetchBoard.boardAddress?.address} ${props.data?.fetchBoard.boardAddress?.addressDetail}`}
-            >
+            <Tooltip title={props.data?.fetchBoard.youtubeUrl}>
+              <S.LinkIcon />
+            </Tooltip>
+            <Tooltip title={props.data?.fetchBoard.boardAddress?.address}>
               <S.LocationIcon />
             </Tooltip>
           </S.LocationWrapper>
