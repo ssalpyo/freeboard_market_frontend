@@ -1,154 +1,62 @@
 import styled from "@emotion/styled";
-import { HeartOutlined } from "@ant-design/icons";
+import theme from "../../../../commons/styles/theme";
 
 export const Wrapper = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
   background-color: #fff;
-  border: none;
   box-shadow: 0px 0px 10px gray;
   padding: 50px;
 `;
 
-export const visitedItems = styled.div`
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  padding-left: 50px;
-  padding-top: 70px;
+export const SearchBox = styled.div`
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+
+  @media ${theme.device.tablet} {
+    width: 100%;
+    padding: 0;
+    padding-left: 15px;
+  }
 `;
 
-export const SearchWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-
-export const Search = styled.input`
-  width: 776px;
-  height: 52px;
+export const SearchInput = styled.input`
+  width: 100%;
   background: #f2f2f2;
   border: none;
   border-radius: 10px;
-  padding: 0px 15px;
-  margin-bottom: 10px;
+  padding: 12px 43px;
   outline-color: #000;
+  ::placeholder {
+    ${theme.fontSizes.base};
+    line-height: 22px;
+    font-weight: 400;
+    color: #999;
+    transition: all 0.3s ease-in-out;
+  }
+  :focus::placeholder {
+    color: transparent;
+  }
+`;
+
+export const SearchImg = styled.img`
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
 `;
 
 export const ScrollBox = styled.div`
   height: 700px;
   overflow-y: auto;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
   margin-top: 20px;
 `;
 
-export const Row = styled.div`
+export const ListWrapper = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
-  padding: 15px 0px;
-  align-items: center;
-  border-bottom: 1px solid gray;
-`;
-
-export const ListImage = styled.img`
-  width: 150px;
-  height: 150px;
-`;
-
-export const VisitedListImage = styled.img`
-  width: 100px;
-  height: 100px;
-`;
-
-export const ImageBox = styled.div`
-  min-width: 150px;
-  min-height: 150px;
-  background-color: #999;
-`;
-
-export const ListBody = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-export const FlexBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding-left: 40px;
-`;
-
-export const Name = styled.div`
-  font-family: "Noto Sans CJK KR";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
-  color: #000;
-  width: 100%;
-  cursor: pointer;
-
-  :hover {
-    color: blue;
-  }
-`;
-
-export const Remarks = styled.div`
-  font-family: "Noto Sans CJK KR";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: #4f4f4f;
-  padding-top: 4px;
-  padding-bottom: 24px;
-`;
-
-export const SellerWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;
-
-export const ProfileImg = styled.img``;
-
-export const Seller = styled.div`
-  font-family: "Noto Sans CJK KR";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: #4f4f4f;
-  padding-left: 6px;
-  padding-right: 22px;
-`;
-
-export const PickedIcon = styled(HeartOutlined)`
-  font-size: 20px;
-  color: #ffd600;
-`;
-
-export const PickedCount = styled.div`
-  font-family: "Noto Sans CJK KR";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #4f4f4f;
-  padding-left: 6px;
-`;
-
-export const Price = styled.div`
-  font-family: "Noto Sans CJK KR";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
-  color: #000;
+  flex-wrap: wrap;
 `;
 
 export const Footer = styled.div`

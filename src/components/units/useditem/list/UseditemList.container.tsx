@@ -1,33 +1,23 @@
 import { useQuery } from "@apollo/client";
 import { NextRouter, useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import UseditemListUI from "./UseditemList.presenter";
-import { FETCH_USEDITEMS } from "./UseditemList.queries";
+import {
+  FETCH_USEDITEMS,
+  FETCH_USEDITEMS_I_PICKED,
+} from "./UseditemList.queries";
 
 export default function UseditemList() {
   const router: NextRouter = useRouter();
 
   const { data, fetchMore } = useQuery(FETCH_USEDITEMS);
-  const [visitedItems, setVisitedItems] = useState([]);
-
-  useEffect(() => {
-    setVisitedItems(JSON.parse(localStorage.getItem("visited") || "[]"));
-  }, []);
+  const { data: pickList } = useQuery(FETCH_USEDITEMS_I_PICKED, {
+    variables: {
+      search: "",
+    },
+  });
 
   const onClickMoveToUseditemNew = () => {
     router.push("/markets/new");
-  };
-
-  const onClickMoveToUseditemDetail = (el: any) => () => {
-    const visited = JSON.parse(localStorage.getItem("visited") || "[]");
-    const temp = visited.filter((visitedEl: any) => visitedEl._id === el._id);
-
-    if (!temp.length) {
-      const { __typename, ...newEl } = el;
-      visited.unshift(newEl);
-      localStorage.setItem("visited", JSON.stringify(visited));
-    }
-    router.push(`/markets/${el._id}`);
   };
 
   const loadFunc = () => {
@@ -53,10 +43,9 @@ export default function UseditemList() {
   return (
     <UseditemListUI
       data={data}
-      visitedItems={visitedItems}
+      pickList={pickList}
       loadFunc={loadFunc}
       onClickMoveToUseditemNew={onClickMoveToUseditemNew}
-      onClickMoveToUseditemDetail={onClickMoveToUseditemDetail}
     />
   );
 }
