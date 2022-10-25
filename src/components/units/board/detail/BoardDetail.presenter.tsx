@@ -48,11 +48,7 @@ export default function BoardDetailUI(props: IBoardDetailUIProps) {
             <S.Contents />
           )}
           {props.data?.fetchBoard.youtubeUrl && (
-            <ReactPlayer
-              width="486px"
-              height="240px"
-              url={props.data?.fetchBoard.youtubeUrl}
-            />
+            <ReactPlayer width="100%" url={props.data?.fetchBoard.youtubeUrl} />
           )}
         </S.CardBody>
         <S.CardFooter>

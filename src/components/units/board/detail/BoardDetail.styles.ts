@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
 
 export const CardWrapper = styled.div`
   width: 70%;
-  padding-right: 50px;
+  padding-right: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,8 +126,9 @@ export const Title = styled.h1`
 `;
 
 export const Image = styled.img`
-  max-width: 854px;
-  max-height: 480px;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 1;
 `;
 
 export const Contents = styled.div`
