@@ -185,7 +185,7 @@ const flex = {
 };
 
 const deviceSizes = {
-  mobile: "360px",
+  mobile: "480px",
   tablet: "768px",
   laptop: "1024px",
 };
@@ -193,7 +193,7 @@ const deviceSizes = {
 const device = {
   mobile: `screen and (max-width: ${deviceSizes.mobile})`,
   tablet: `screen and (max-width: ${deviceSizes.tablet})`,
-  laptop: `screen and (min-width: ${deviceSizes.tablet})`,
+  laptop: `screen and (min-width: ${deviceSizes.laptop})`,
 };
 
 const theme = {
