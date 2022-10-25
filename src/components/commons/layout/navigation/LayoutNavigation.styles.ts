@@ -4,12 +4,19 @@ import { IMenuItemProps } from "./LayoutNavigation.types";
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 60px;
+  height: 56px;
   background-color: #999;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  @media ${theme.device.tablet} {
+    height: 40px;
+  }
+  @media ${theme.device.mobile} {
+    height: 30px;
+  }
 `;
 
 export const MenuItem = styled.div`
@@ -23,8 +30,8 @@ export const MenuItem = styled.div`
   }
 
   @media ${theme.device.tablet} {
-    margin: 0 20px;
-    font-size: 14px;
+    margin: 0 30px;
+    font-size: 16px;
   }
   @media ${theme.device.mobile} {
     margin: 0 10px;
