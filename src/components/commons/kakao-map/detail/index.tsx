@@ -12,6 +12,7 @@ interface IKakaoMapProps {
 export default function KakaoMapDetail(props: IKakaoMapProps) {
   useEffect(() => {
     const script = document.createElement("script");
+    script.type = "text/javascript";
     script.src =
       "//dapi.kakao.com/v2/maps/sdk.js?appkey=da1e34053ad439b4d77d5e5a6333516b&autoload=false";
     document.head.appendChild(script);
