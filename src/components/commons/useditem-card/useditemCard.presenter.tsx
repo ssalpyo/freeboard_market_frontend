@@ -27,9 +27,7 @@ export default function UseditemCardUI(props: any) {
           <S.ContentBox>
             <CF.ColumnDiv>
               <S.TextTitle>{props.data.name}</S.TextTitle>
-              <S.TextBox>
-                <S.SubTextBox>{props.data.remarks}</S.SubTextBox>
-              </S.TextBox>
+              <S.SubTextBox>{props.data.remarks}</S.SubTextBox>
               <S.PriceBox>
                 <S.Price>{props.data.price.toLocaleString()}원</S.Price>
               </S.PriceBox>

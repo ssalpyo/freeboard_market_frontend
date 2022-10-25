@@ -41,7 +41,9 @@ export const ImgBox = styled.div``;
 
 export const Img = styled.img`
   width: 100%;
-  max-height: 300px;
+  height: 100%;
+  min-height: 200px;
+  max-height: 260px;
   border-radius: 10px 10px 0 0;
 
   @media (max-width: 768px) {
@@ -77,32 +79,29 @@ export const PickCount = styled.div`
 `;
 
 export const ContentBox = styled.div`
-  padding: 10px;
-`;
-
-export const TextBox = styled.div`
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  padding: 10px 20px;
 `;
 
 export const TextTitle = styled.p`
   margin: 0;
   ${theme.fontSizes.base};
-  /* font-weight: bold; */
   color: #333;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     font-size: 14px;
-    /* font-weight: 700; */
   }
 `;
 
 export const SubTextBox = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  ${theme.fontSizes.small};
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 
 export const PriceBox = styled.div`
