@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   width: 30%;
   display: flex;
   flex-direction: column;
-  padding-left: 50px;
+  padding-left: 30px;
 
   @media ${theme.device.tablet} {
     width: 100%;

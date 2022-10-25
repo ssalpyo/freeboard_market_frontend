@@ -8,6 +8,14 @@ export const Wrapper = styled.div`
   padding: 50px;
 `;
 
+export const HeaderBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+`;
+
 export const SearchBox = styled.div`
   width: 100%;
   max-width: 600px;
@@ -50,7 +58,6 @@ export const SearchImg = styled.img`
 export const ScrollBox = styled.div`
   height: 700px;
   overflow-y: auto;
-  margin-top: 20px;
 `;
 
 export const ListWrapper = styled.div`
@@ -59,25 +66,12 @@ export const ListWrapper = styled.div`
   flex-wrap: wrap;
 `;
 
-export const Footer = styled.div`
-  display: flex;
-  flex-direction: row-reverse;
-  padding-top: 30px;
-`;
-
 export const Button = styled.button`
   width: 100%;
-  max-width: 171px;
-  height: 52px;
-  background-color: white;
+  max-width: 140px;
+  padding: 11px 5px;
   border: 1px solid #000;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  cursor: pointer;
-
+  border-radius: 5px;
   :hover {
     background-color: #000;
     color: #fff;

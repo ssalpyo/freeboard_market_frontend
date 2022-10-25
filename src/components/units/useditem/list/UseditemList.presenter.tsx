@@ -7,10 +7,15 @@ import UseditemCard from "../../../commons/useditem-card/useditemCard.container"
 export default function UseditemListUI(props: IUseditemListUIProps) {
   return (
     <S.Wrapper>
-      <S.SearchBox>
-        <S.SearchInput placeholder="제품을 검색해주세요." />
-        <S.SearchImg src="/images/search.svg" alt="searchImg" />
-      </S.SearchBox>
+      <S.HeaderBox>
+        <S.SearchBox>
+          <S.SearchInput placeholder="제품을 검색해주세요." />
+          <S.SearchImg src="/images/search.svg" alt="searchImg" />
+        </S.SearchBox>
+        <S.Button onClick={props.onClickMoveToUseditemNew}>
+          상품 등록하기
+        </S.Button>
+      </S.HeaderBox>
       <S.ScrollBox>
         <InfiniteScroll
           pageStart={0}
@@ -29,11 +34,6 @@ export default function UseditemListUI(props: IUseditemListUIProps) {
           </S.ListWrapper>
         </InfiniteScroll>
       </S.ScrollBox>
-      <S.Footer>
-        <S.Button onClick={props.onClickMoveToUseditemNew}>
-          상품 등록하기
-        </S.Button>
-      </S.Footer>
     </S.Wrapper>
   );
 }
