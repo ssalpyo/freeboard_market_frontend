@@ -113,7 +113,7 @@ export const Button = styled.button`
   width: 100%;
   max-width: 160px;
   padding: 14px 5px;
-  border: 1px solid black;
+  border: 1px solid #000;
   border-radius: 10px;
   :hover {
     background-color: #000;
