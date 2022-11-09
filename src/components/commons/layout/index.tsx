@@ -30,6 +30,10 @@ const Body = styled.div`
   @media ${theme.device.tablet} {
     padding: 20px;
   }
+
+  @media ${theme.device.mobile} {
+    padding: 10px;
+  }
 `;
 
 export default function Layout(props: ILayoutProps) {
