@@ -7,24 +7,24 @@ export default function LayoutHeaderUI(props: IProps) {
       <S.InnerWrapper>
         <S.InnerLogo onClick={props.onClickLogo}>SSALPYO</S.InnerLogo>
         {props.accessToken && (
-          <div>
+          <S.ButtonBox>
             <S.SignInButton>
               {props.data?.fetchUserLoggedIn.name}
             </S.SignInButton>
             <S.LogOutButton onClick={props.onClickLogOut}>
               로그아웃
             </S.LogOutButton>
-          </div>
+          </S.ButtonBox>
         )}
         {!props.accessToken && (
-          <div>
+          <S.ButtonBox>
             <S.SignInButton onClick={props.onClickMoveToLogin}>
               로그인
             </S.SignInButton>
             <S.SignUpButton onClick={props.onClickMoveToSignUp}>
               회원가입
             </S.SignUpButton>
-          </div>
+          </S.ButtonBox>
         )}
       </S.InnerWrapper>
     </S.Wrapper>

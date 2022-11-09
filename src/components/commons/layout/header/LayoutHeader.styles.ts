@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import theme from "../../../../commons/styles/theme";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -15,7 +16,16 @@ export const InnerWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
-  padding: 0 20px;
+  padding: 0 30px;
+
+  @media ${theme.device.tablet} {
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  @media ${theme.device.mobile} {
+    padding: 0 10px;
+  }
 `;
 
 export const InnerLogo = styled.div`
@@ -25,30 +35,36 @@ export const InnerLogo = styled.div`
   font-style: italic;
   color: #fff;
   cursor: pointer;
+
+  @media ${theme.device.tablet} {
+    font-size: 28px;
+  }
+`;
+
+export const ButtonBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 `;
 
 export const SignInButton = styled.span`
-  margin: 10px;
   color: #fff;
   cursor: pointer;
 `;
 
 export const SignUpButton = styled.button`
-  margin: 10px;
   color: #000;
   text-align: center;
   border-radius: 10px;
   background-color: #fff;
   padding: 5px 10px;
-  cursor: pointer;
 `;
 
 export const LogOutButton = styled.button`
-  margin: 10px;
   color: #000;
   text-align: center;
   border-radius: 10px;
   background-color: #fff;
   padding: 5px 10px;
-  cursor: pointer;
 `;
