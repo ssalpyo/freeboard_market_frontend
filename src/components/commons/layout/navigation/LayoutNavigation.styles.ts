@@ -12,10 +12,10 @@ export const Wrapper = styled.div`
   align-items: center;
 
   @media ${theme.device.tablet} {
-    height: 40px;
+    height: 46px;
   }
   @media ${theme.device.mobile} {
-    height: 30px;
+    height: 36px;
   }
 `;
 
@@ -30,11 +30,11 @@ export const MenuItem = styled.div`
   }
 
   @media ${theme.device.tablet} {
-    margin: 0 30px;
+    margin: 0 32px;
     font-size: 16px;
   }
   @media ${theme.device.mobile} {
-    margin: 0 10px;
+    margin: 0 12px;
     font-size: 12px;
   }
 `;
