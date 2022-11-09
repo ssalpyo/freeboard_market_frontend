@@ -1,3 +1,3 @@
 export default function RandingPage() {
-  return <div>HOME</div>;
+  return <div>랜딩 페이지 준비중입니다.</div>;
 }
