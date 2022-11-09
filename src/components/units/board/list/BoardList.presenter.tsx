@@ -3,17 +3,15 @@ import { getDate } from "../../../../commons/libraries/utils";
 import { IBoardListUIProps } from "./BoardList.types";
 import Paginations01 from "../../../commons/paginations/01/Paginations01.container";
 import { v4 as uuidv4 } from "uuid";
+import SearchInput from "../../../commons/search";
 
 export default function BoardListUI(props: IBoardListUIProps) {
   return (
     <S.Wrapper>
-      <S.SearchBox>
-        <S.SearchInput
-          placeholder="제목을 검색해주세요."
-          onChange={props.onChangeSearch}
-        />
-        <S.SearchImg src="/images/search.svg" alt="searchImg" />
-      </S.SearchBox>
+      <SearchInput
+        placeholder="제목을 검색해주세요"
+        onChange={props.onChangeSearch}
+      />
       <S.TableTop />
       <S.Row>
         <S.ColumnHeaderBasic>ID</S.ColumnHeaderBasic>

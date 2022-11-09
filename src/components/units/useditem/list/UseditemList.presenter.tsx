@@ -3,15 +3,13 @@ import { v4 as uuidv4 } from "uuid";
 import { IUseditemListUIProps } from "./UseditemList.types";
 import InfiniteScroll from "react-infinite-scroller";
 import UseditemCard from "../../../commons/useditem-card/useditemCard.container";
+import SearchInput from "../../../commons/search";
 
 export default function UseditemListUI(props: IUseditemListUIProps) {
   return (
     <S.Wrapper>
       <S.HeaderBox>
-        <S.SearchBox>
-          <S.SearchInput placeholder="제품을 검색해주세요." />
-          <S.SearchImg src="/images/search.svg" alt="searchImg" />
-        </S.SearchBox>
+        <SearchInput placeholder="제품을 검색해주세요." />
         <S.Button onClick={props.onClickMoveToUseditemNew}>
           상품 등록하기
         </S.Button>
